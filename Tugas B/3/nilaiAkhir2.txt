@@ -1,0 +1,60 @@
+PROGRAM NilaiAkhir
+
+DEKLARASI
+    nama, nim : string
+    nilaiFormatif, nilaiUTS, nilaiUAS : real
+    nilaiAkhir, totalNilai, rataRata : real
+    jumlahMahasiswa : integer
+    pilihan : string
+
+ALGORITMA
+    totalNilai ← 0
+    jumlahMahasiswa ← 0
+    pilihan ← "Y"
+
+    while pilihan = "Y" do
+
+        read(nama)
+        read(nim)
+        read(nilaiFormatif)
+        read(nilaiUTS)
+        read(nilaiUAS)
+
+        nilaiAkhir ← (nilaiFormatif * 30 / 100) +
+                      (nilaiUTS * 30 / 100) +
+                      (nilaiUAS * 40 / 100)
+
+        if nilaiAkhir >= 80 then
+            nilaiHuruf ← "A"
+        else if nilaiAkhir >= 77 then
+            nilaiHuruf ← "A-"
+        else if nilaiAkhir >= 74 then
+            nilaiHuruf ← "B+"
+        else if nilaiAkhir >= 70 then
+            nilaiHuruf ← "B"
+        else if nilaiAkhir >= 67 then
+            nilaiHuruf ← "B-"
+        else if nilaiAkhir >= 64 then
+            nilaiHuruf ← "C+"
+        else if nilaiAkhir >= 60 then
+            nilaiHuruf ← "C"
+        else if nilaiAkhir >= 50 then
+            nilaiHuruf ← "D"
+        else
+            nilaiHuruf ← "E"
+        endif
+
+        write(nilaiAkhir)
+        write(nilaiHuruf)
+
+        totalNilai ← totalNilai + nilaiAkhir
+        jumlahMahasiswa ← jumlahMahasiswa + 1
+
+        write("Apakah ingin input data lagi (Y/T)?")
+        read(pilihan)
+
+    endwhile
+
+    rataRata ← totalNilai / jumlahMahasiswa
+
+    write("Rata-rata nilai akhir = ", rataRata)

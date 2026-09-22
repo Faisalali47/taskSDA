@@ -1,0 +1,5 @@
+FUNGSI Tambah(a, b : integer) → integer
+
+ALGORITMA
+    hasil ← a + b
+    return hasil

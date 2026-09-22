@@ -1,0 +1,12 @@
+ALGORITMA Utama
+
+DEKLARASI
+    a, b, hasil : integer
+
+ALGORITMA
+    read(a)
+    read(b)
+
+    hasil ← Tambah(a, b)
+
+    write(hasil)

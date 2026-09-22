@@ -1,0 +1,60 @@
+PROGRAM NilaiSkripsi
+
+DEKLARASI
+    nama, nim : string
+    namaPembimbing1, namaPembimbing2 : string
+    namaPenguji1, namaPenguji2 : string
+    nilaiPembimbing1, nilaiPembimbing2 : real
+    nilaiPenguji1, nilaiPenguji2 : real
+    nilaiAkhir : real
+    nilaiHuruf : string
+
+ALGORITMA
+    read(nama)
+    read(nim)
+    read(namaPembimbing1)
+    read(nilaiPembimbing1)
+    read(namaPembimbing2)
+    read(nilaiPembimbing2)
+    read(namaPenguji1)
+    read(nilaiPenguji1)
+    read(namaPenguji2)
+    read(nilaiPenguji2)
+
+    nilaiAkhir ← (nilaiPembimbing1 * 20 / 100) +
+                  (nilaiPembimbing2 * 20 / 100) +
+                  (nilaiPenguji1 * 30 / 100) +
+                  (nilaiPenguji2 * 30 / 100)
+
+    if nilaiAkhir >= 80 then
+        nilaiHuruf ← "A"
+    else if nilaiAkhir >= 77 then
+        nilaiHuruf ← "A-"
+    else if nilaiAkhir >= 74 then
+        nilaiHuruf ← "B+"
+    else if nilaiAkhir >= 70 then
+        nilaiHuruf ← "B"
+    else if nilaiAkhir >= 67 then
+        nilaiHuruf ← "B-"
+    else if nilaiAkhir >= 64 then
+        nilaiHuruf ← "C+"
+    else if nilaiAkhir >= 60 then
+        nilaiHuruf ← "C"
+    else if nilaiAkhir >= 50 then
+        nilaiHuruf ← "D"
+    else
+        nilaiHuruf ← "E"
+    endif
+
+    write(nama)
+    write(nim)
+    write(namaPembimbing1)
+    write(nilaiPembimbing1)
+    write(namaPembimbing2)
+    write(nilaiPembimbing2)
+    write(namaPenguji1)
+    write(nilaiPenguji1)
+    write(namaPenguji2)
+    write(nilaiPenguji2)
+    write(nilaiAkhir)
+    write(nilaiHuruf)

@@ -1,0 +1,38 @@
+PROGRAM HitungBiayaSewa
+
+DEKLARASI
+    jamMasuk, menitMasuk, detikMasuk : integer
+    jamKeluar, menitKeluar, detikKeluar : integer
+    totalDetikMasuk, totalDetikKeluar : integer
+    lamaDetik : integer
+    jam, menit, detik : integer
+    biaya : integer
+
+ALGORITMA
+    write("Program Menghitung Biaya Sewa")
+    write("==============================")
+
+    write("Jam Masuk")
+    read(jamMasuk, menitMasuk, detikMasuk)
+
+    write("Jam Keluar")
+    read(jamKeluar, menitKeluar, detikKeluar)
+
+    {Konversi waktu menjadi detik}
+    totalDetikMasuk ← (jamMasuk * 3600) + (menitMasuk * 60) + detikMasuk
+    totalDetikKeluar ← (jamKeluar * 3600) + (menitKeluar * 60) + detikKeluar
+
+    {Menghitung lama pemakaian}
+    lamaDetik ← totalDetikKeluar - totalDetikMasuk
+
+    {Konversi lama pemakaian}
+    jam ← lamaDetik div 3600
+    sisa ← lamaDetik mod 3600
+
+    menit ← sisa div 60
+    detik ← sisa mod 60
+
+    {Menghitung biaya}
+    biaya ← (jam * 3000) + (menit * 500) + (detik * 10)
+
+    write("Biaya Sewanya = Rp.", biaya)

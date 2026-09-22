@@ -1,0 +1,5 @@
+FUNGSI SisaBagi(a, b : integer) → integer
+
+ALGORITMA
+    hasil ← a mod b
+    return hasil

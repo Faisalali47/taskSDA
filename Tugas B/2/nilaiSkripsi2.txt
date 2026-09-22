@@ -1,0 +1,37 @@
+PROGRAM NilaiSkripsiBanyakMahasiswa
+
+DEKLARASI
+    nama, nim : string
+    nilaiFormatif, nilaiUTS, nilaiUAS : real
+    nilaiAkhir, totalNilai, rataRata : real
+    jumlahMahasiswa : integer
+    pilihan : char
+
+ALGORITMA
+    totalNilai ← 0
+    jumlahMahasiswa ← 0
+    pilihan ← "Y"
+
+    while pilihan = "Y" do
+
+        read(nama)
+        read(nim)
+        read(nilaiFormatif)
+        read(nilaiUTS)
+        read(nilaiUAS)
+
+        nilaiAkhir ← (nilaiFormatif * 30 / 100) +
+                      (nilaiUTS * 30 / 100) +
+                      (nilaiUAS * 40 / 100)
+
+        totalNilai ← totalNilai + nilaiAkhir
+        jumlahMahasiswa ← jumlahMahasiswa + 1
+
+        write("Apakah ingin input data lagi (Y/T)?")
+        read(pilihan)
+
+    endwhile
+
+    rataRata ← totalNilai / jumlahMahasiswa
+
+    write("Rata-rata nilai akhir =", rataRata)
