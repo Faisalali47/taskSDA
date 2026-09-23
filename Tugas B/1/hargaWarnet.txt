@@ -36,3 +36,5 @@ ALGORITMA
     biaya ← (jam * 3000) + (menit * 500) + (detik * 10)
 
     write("Biaya Sewanya = Rp.", biaya)
+
+    

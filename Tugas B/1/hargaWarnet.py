@@ -22,3 +22,4 @@ detik = sisa % 60
 biaya = (jam * 3000) + (menit * 500) + (detik * 10)
 
 print("Biaya Sewanya = Rp.", biaya)
+
